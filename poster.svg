@@ -1,0 +1,462 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" style="background:#07090e; font-family: 'JetBrains Mono', 'Fira Code', 'Segoe UI', monospace, sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="50%" cy="58%" r="65%">
+      <stop offset="0%" stop-color="#3d1b03" stop-opacity="0.85"/>
+      <stop offset="35%" stop-color="#1c0e06" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#090b12" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#05070a" stop-opacity="1"/>
+    </radialGradient>
+    
+    <radialGradient id="flameGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff9900" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#ff5500" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ff3300" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="diyaLightGlow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffe680" stop-opacity="0.9"/>
+      <stop offset="25%" stop-color="#ff9400" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#ff4800" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ff3300" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Metallic Gold Text Gradient -->
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF0"/>
+      <stop offset="25%" stop-color="#FFDF73"/>
+      <stop offset="55%" stop-color="#FFAE19"/>
+      <stop offset="85%" stop-color="#FF7A00"/>
+      <stop offset="100%" stop-color="#E65100"/>
+    </linearGradient>
+
+    <!-- Cyan Neon Accent -->
+    <linearGradient id="cyanNeon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+
+    <!-- Diya Body Gradient -->
+    <linearGradient id="diyaBowlGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b1706"/>
+      <stop offset="25%" stop-color="#80330d"/>
+      <stop offset="50%" stop-color="#d45b13"/>
+      <stop offset="75%" stop-color="#732b07"/>
+      <stop offset="100%" stop-color="#240e04"/>
+    </linearGradient>
+
+    <!-- Diya Rim Neon Stroke -->
+    <linearGradient id="diyaRimGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff4500"/>
+      <stop offset="25%" stop-color="#ffaa00"/>
+      <stop offset="50%" stop-color="#ffee55"/>
+      <stop offset="75%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="#ff4500"/>
+    </linearGradient>
+
+    <!-- Flame Gradients -->
+    <linearGradient id="outerFlame" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#ff2200"/>
+      <stop offset="30%" stop-color="#ff6600"/>
+      <stop offset="70%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="#ffee77"/>
+    </linearGradient>
+
+    <linearGradient id="innerFlame" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#ff8800"/>
+      <stop offset="40%" stop-color="#ffdd33"/>
+      <stop offset="80%" stop-color="#ffffcc"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <!-- Glassmorphic Card Fill -->
+    <linearGradient id="glassCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#182033" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0c101c" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Filter Glow Effects -->
+    <filter id="glow-gold" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="intense-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16" result="blur1"/>
+      <feGaussianBlur stdDeviation="30" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="neon-rim" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="card-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.75"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#ff8800" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- 1. Background Base -->
+  <rect width="1080" height="1080" fill="#06080e"/>
+  <rect width="1080" height="1080" fill="url(#bgGlow)"/>
+
+  <!-- 2. Developer IDE Grid & Circuit Matrix Background -->
+  <g opacity="0.12" stroke="#4facfe" stroke-width="1">
+    <!-- Grid Lines Horizontal -->
+    <line x1="0" y1="120" x2="1080" y2="120" stroke-dasharray="6,6"/>
+    <line x1="0" y1="240" x2="1080" y2="240" stroke-dasharray="6,6"/>
+    <line x1="0" y1="360" x2="1080" y2="360" stroke-dasharray="6,6"/>
+    <line x1="0" y1="480" x2="1080" y2="480" stroke-dasharray="6,6"/>
+    <line x1="0" y1="600" x2="1080" y2="600" stroke-dasharray="6,6"/>
+    <line x1="0" y1="720" x2="1080" y2="720" stroke-dasharray="6,6"/>
+    <line x1="0" y1="840" x2="1080" y2="840" stroke-dasharray="6,6"/>
+    <line x1="0" y1="960" x2="1080" y2="960" stroke-dasharray="6,6"/>
+
+    <!-- Grid Lines Vertical -->
+    <line x1="120" y1="0" x2="120" y2="1080" stroke-dasharray="6,6"/>
+    <line x1="240" y1="0" x2="240" y2="1080" stroke-dasharray="6,6"/>
+    <line x1="360" y1="0" x2="360" y2="1080" stroke-dasharray="6,6"/>
+    <line x1="480" y1="0" x2="480" y2="1080" stroke-dasharray="6,6"/>
+    <line x1="600" y1="0" x2="600" y2="1080" stroke-dasharray="6,6"/>
+    <line x1="720" y1="0" x2="720" y2="1080" stroke-dasharray="6,6"/>
+    <line x1="840" y1="0" x2="840" y2="1080" stroke-dasharray="6,6"/>
+    <line x1="960" y1="0" x2="960" y2="1080" stroke-dasharray="6,6"/>
+  </g>
+
+  <!-- Background Binary & Hex Bits (Faint Ambient) -->
+  <g font-family="monospace" font-size="11" fill="#ffaa00" opacity="0.15">
+    <text x="50" y="80">01001000 01000001 01010000 01010000 01011001</text>
+    <text x="50" y="100">01000100 01001001 01010111 01000001 01001100 01001001</text>
+    <text x="720" y="80">const LIGHT = 0xFFFFFF;</text>
+    <text x="720" y="100">while(darkness) debug();</text>
+    <text x="60" y="990">// Happy Diwali 2026 • Code The Light</text>
+    <text x="60" y="1010">System.out.println("Prosperity");</text>
+    <text x="740" y="990">git push origin illumination</text>
+    <text x="740" y="1010">docker run -d -p 2026:2026 joy:latest</text>
+  </g>
+
+  <!-- 3. Rangoli / Mandala Circuit Board Base at the Bottom -->
+  <g transform="translate(540, 810) scale(1.3, 0.45)" opacity="0.45">
+    <!-- Golden Mandala Circles -->
+    <circle cx="0" cy="0" r="320" fill="none" stroke="#ffaa00" stroke-width="1.5" stroke-dasharray="4,8"/>
+    <circle cx="0" cy="0" r="270" fill="none" stroke="#ffa200" stroke-width="2"/>
+    <circle cx="0" cy="0" r="230" fill="none" stroke="#ff7700" stroke-width="1.5" stroke-dasharray="8,6"/>
+    <circle cx="0" cy="0" r="180" fill="none" stroke="#ffd700" stroke-width="2"/>
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#ffbb00" stroke-width="3"/>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#ffee55" stroke-width="2" stroke-dasharray="2,4"/>
+
+    <!-- Circuit Rangoli Traces & Nodes -->
+    <g stroke="#ff9900" stroke-width="2" fill="none">
+      <path d="M 0,-270 L 0,-330 M 0,270 L 0,330 M -270,0 L -330,0 M 270,0 L 330,0"/>
+      <path d="M -190,-190 L -230,-230 M 190,-190 L 230,-230 M -190,190 L -230,230 M 190,190 L 230,230"/>
+      <!-- Petal Curves with Circuit Endpoints -->
+      <path d="M 0,-180 Q 70,-240 127,-127 Q 240,-70 180,0 Q 240,70 127,127 Q 70,240 0,180 Q -70,240 -127,127 Q -240,70 -180,0 Q -240,-70 -127,-127 Q -70,-240 0,-180 Z" stroke="#ffc400" stroke-width="2"/>
+    </g>
+    <!-- Circuit Pin Pads -->
+    <g fill="#ffd700">
+      <circle cx="0" cy="-330" r="5"/><circle cx="0" cy="330" r="5"/><circle cx="-330" cy="0" r="5"/><circle cx="330" cy="0" r="5"/>
+      <circle cx="-230" cy="-230" r="5"/><circle cx="230" cy="-230" r="5"/><circle cx="-230" cy="230" r="5"/><circle cx="230" cy="230" r="5"/>
+      <circle cx="0" cy="-180" r="4"/><circle cx="127" cy="-127" r="4"/><circle cx="180" cy="0" r="4"/><circle cx="127" cy="127" r="4"/>
+      <circle cx="0" cy="180" r="4"/><circle cx="-127" cy="127" r="4"/><circle cx="-180" cy="0" r="4"/><circle cx="-127" cy="-127" r="4"/>
+    </g>
+  </g>
+
+  <!-- 4. Fireworks in the Sky (Developer Themed Syntax Fireworks) -->
+  <!-- Left Firework Burst (Cyan & Gold with </> and ;) -->
+  <g transform="translate(190, 310)" filter="url(#glow-gold)">
+    <circle cx="0" cy="0" r="6" fill="#00f2fe"/>
+    <!-- Light Rays -->
+    <g stroke="#00f2fe" stroke-width="2" opacity="0.8">
+      <line x1="0" y1="-15" x2="0" y2="-90" stroke-dasharray="8,6"/>
+      <line x1="15" y1="-15" x2="70" y2="-70" stroke-dasharray="8,6"/>
+      <line x1="15" y1="0" x2="90" y2="0" stroke-dasharray="8,6"/>
+      <line x1="15" y1="15" x2="70" y2="70" stroke-dasharray="8,6"/>
+      <line x1="0" y1="15" x2="0" y2="90" stroke-dasharray="8,6"/>
+      <line x1="-15" y1="15" x2="-70" y2="70" stroke-dasharray="8,6"/>
+      <line x1="-15" y1="0" x2="-90" y2="0" stroke-dasharray="8,6"/>
+      <line x1="-15" y1="-15" x2="-70" y2="-70" stroke-dasharray="8,6"/>
+    </g>
+    <!-- Sparkling Syntax Bursts -->
+    <text x="0" y="-105" font-size="16" fill="#ffd700" font-weight="bold" text-anchor="middle">&lt;/&gt;</text>
+    <text x="85" y="-80" font-size="14" fill="#00f2fe" font-weight="bold" text-anchor="middle">{ }</text>
+    <text x="105" y="5" font-size="16" fill="#ff9900" font-weight="bold" text-anchor="middle">++</text>
+    <text x="85" y="90" font-size="14" fill="#ffd700" font-weight="bold" text-anchor="middle">;</text>
+    <text x="-90" y="-80" font-size="14" fill="#ff77aa" font-weight="bold" text-anchor="middle">&amp;&amp;</text>
+    <text x="-105" y="5" font-size="15" fill="#00ffcc" font-weight="bold" text-anchor="middle">()</text>
+    <text x="-85" y="90" font-size="16" fill="#ffd700" font-weight="bold" text-anchor="middle">=&gt;</text>
+    <!-- Particles -->
+    <circle cx="45" cy="-35" r="3" fill="#ffe066"/><circle cx="-50" cy="-40" r="2.5" fill="#00f2fe"/>
+    <circle cx="60" cy="30" r="2.5" fill="#ffaa00"/><circle cx="-40" cy="50" r="3" fill="#ff3388"/>
+  </g>
+
+  <!-- Right Firework Burst (Gold, Orange & Violet) -->
+  <g transform="translate(890, 310)" filter="url(#glow-gold)">
+    <circle cx="0" cy="0" r="6" fill="#ffd700"/>
+    <g stroke="#ffaa00" stroke-width="2" opacity="0.8">
+      <line x1="0" y1="-15" x2="0" y2="-90" stroke-dasharray="8,6"/>
+      <line x1="15" y1="-15" x2="70" y2="-70" stroke-dasharray="8,6"/>
+      <line x1="15" y1="0" x2="90" y2="0" stroke-dasharray="8,6"/>
+      <line x1="15" y1="15" x2="70" y2="70" stroke-dasharray="8,6"/>
+      <line x1="0" y1="15" x2="0" y2="90" stroke-dasharray="8,6"/>
+      <line x1="-15" y1="15" x2="-70" y2="70" stroke-dasharray="8,6"/>
+      <line x1="-15" y1="0" x2="-90" y2="0" stroke-dasharray="8,6"/>
+      <line x1="-15" y1="-15" x2="-70" y2="-70" stroke-dasharray="8,6"/>
+    </g>
+    <text x="0" y="-105" font-size="15" fill="#ff66cc" font-weight="bold" text-anchor="middle">/* 🪔 */</text>
+    <text x="85" y="-80" font-size="15" fill="#ffd700" font-weight="bold" text-anchor="middle">&lt;Light /&gt;</text>
+    <text x="105" y="5" font-size="15" fill="#00f2fe" font-weight="bold" text-anchor="middle">0x1F56F</text>
+    <text x="85" y="90" font-size="14" fill="#ff9900" font-weight="bold" text-anchor="middle">===</text>
+    <text x="-90" y="-80" font-size="14" fill="#00ff88" font-weight="bold" text-anchor="middle">#!diwali</text>
+    <text x="-105" y="5" font-size="16" fill="#ffd700" font-weight="bold" text-anchor="middle">[✨]</text>
+    <text x="-85" y="90" font-size="14" fill="#ffaa33" font-weight="bold" text-anchor="middle">||</text>
+    <!-- Particles -->
+    <circle cx="35" cy="-45" r="2.5" fill="#ff66cc"/><circle cx="-45" cy="-30" r="3" fill="#ffd700"/>
+    <circle cx="50" cy="40" r="2.5" fill="#00f2fe"/><circle cx="-50" cy="40" r="3" fill="#ff9900"/>
+  </g>
+
+  <!-- Golden Ambient Sparkles / Embers -->
+  <g fill="#ffd700" opacity="0.75" filter="url(#glow-gold)">
+    <circle cx="120" cy="190" r="2"/><circle cx="280" cy="160" r="3"/><circle cx="820" cy="180" r="2.5"/>
+    <circle cx="960" cy="220" r="2"/><circle cx="340" cy="450" r="2"/><circle cx="730" cy="470" r="3"/>
+    <circle cx="160" cy="560" r="2.5"/><circle cx="920" cy="580" r="2"/><circle cx="540" cy="420" r="3"/>
+    <circle cx="490" cy="480" r="2"/><circle cx="590" cy="490" r="2.5"/><circle cx="510" cy="380" r="1.5"/>
+    <circle cx="560" cy="370" r="2"/><circle cx="530" cy="320" r="2.5"/><circle cx="550" cy="270" r="2"/>
+  </g>
+
+  <!-- 5. Floating Glassmorphic Code Snippet Cards -->
+  <!-- Top Left Card: console.log("Happy Diwali"); -->
+  <g transform="translate(100, 420)" filter="url(#card-shadow)">
+    <rect width="320" height="76" rx="14" fill="url(#glassCard)" stroke="#4facfe" stroke-width="1.5" stroke-opacity="0.6"/>
+    <!-- Window Controls -->
+    <circle cx="22" cy="20" r="5" fill="#ff5f56"/>
+    <circle cx="38" cy="20" r="5" fill="#ffbd2e"/>
+    <circle cx="54" cy="20" r="5" fill="#27c93f"/>
+    <text x="160" y="23" font-size="10" fill="#6c809a" text-anchor="middle" font-family="'JetBrains Mono', monospace">festival.js</text>
+    <!-- Code Content -->
+    <text x="20" y="52" font-size="14" font-weight="600" font-family="'JetBrains Mono', monospace">
+      <tspan fill="#4facfe">console</tspan><tspan fill="#ffffff">.</tspan><tspan fill="#ffcf40">log</tspan><tspan fill="#ffffff">(</tspan><tspan fill="#a6e22e">"Happy Diwali! 🪔"</tspan><tspan fill="#ffffff">);</tspan>
+    </text>
+  </g>
+
+  <!-- Top Right Card: git commit -m "Happy Diwali" -->
+  <g transform="translate(660, 420)" filter="url(#card-shadow)">
+    <rect width="320" height="76" rx="14" fill="url(#glassCard)" stroke="#ff9900" stroke-width="1.5" stroke-opacity="0.6"/>
+    <!-- Window Controls -->
+    <circle cx="22" cy="20" r="5" fill="#ff5f56"/>
+    <circle cx="38" cy="20" r="5" fill="#ffbd2e"/>
+    <circle cx="54" cy="20" r="5" fill="#27c93f"/>
+    <text x="160" y="23" font-size="10" fill="#6c809a" text-anchor="middle" font-family="'JetBrains Mono', monospace">bash -- terminal</text>
+    <!-- Code Content -->
+    <text x="20" y="52" font-size="13.5" font-weight="600" font-family="'JetBrains Mono', monospace">
+      <tspan fill="#f92672">git</tspan> <tspan fill="#66d9ef">commit</tspan> <tspan fill="#fd971f">-m</tspan> <tspan fill="#e6db74">"Happy Diwali"</tspan>
+    </text>
+  </g>
+
+  <!-- Bottom Left Card: <HappyDiwali /> -->
+  <g transform="translate(80, 680)" filter="url(#card-shadow)">
+    <rect width="250" height="66" rx="12" fill="url(#glassCard)" stroke="#61dafb" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="20" y="40" font-size="15" font-weight="600" font-family="'JetBrains Mono', monospace">
+      <tspan fill="#f92672">&lt;</tspan><tspan fill="#61dafb">HappyDiwali</tspan> <tspan fill="#fd971f">spark</tspan><tspan fill="#ffffff">={</tspan><tspan fill="#ae81ff">true</tspan><tspan fill="#ffffff">}</tspan> <tspan fill="#f92672">/&gt;</tspan>
+    </text>
+  </g>
+
+  <!-- Bottom Right Card: function celebrate() {} -->
+  <g transform="translate(750, 680)" filter="url(#card-shadow)">
+    <rect width="250" height="66" rx="12" fill="url(#glassCard)" stroke="#a6e22e" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="18" y="40" font-size="13.5" font-weight="600" font-family="'JetBrains Mono', monospace">
+      <tspan fill="#66d9ef">function</tspan> <tspan fill="#a6e22e">celebrate</tspan><tspan fill="#ffffff">() {</tspan> <tspan fill="#fd971f">glow</tspan><tspan fill="#ffffff">(); }</tspan>
+    </text>
+  </g>
+
+  <!-- 6. Developer Tech Stack Icons (Polished 3D Glow Badges) -->
+  <!-- React Badge (Top-Mid Left) -->
+  <g transform="translate(350, 290)" filter="url(#card-shadow)">
+    <rect x="-26" y="-26" width="52" height="52" rx="14" fill="#0d1b2a" stroke="#61dafb" stroke-width="1.5"/>
+    <!-- React Atom Icon -->
+    <ellipse cx="0" cy="0" rx="17" ry="6.5" fill="none" stroke="#61dafb" stroke-width="1.8" transform="rotate(0)"/>
+    <ellipse cx="0" cy="0" rx="17" ry="6.5" fill="none" stroke="#61dafb" stroke-width="1.8" transform="rotate(60)"/>
+    <ellipse cx="0" cy="0" rx="17" ry="6.5" fill="none" stroke="#61dafb" stroke-width="1.8" transform="rotate(120)"/>
+    <circle cx="0" cy="0" r="3" fill="#61dafb"/>
+  </g>
+
+  <!-- JavaScript Badge (Top-Mid Right) -->
+  <g transform="translate(730, 290)" filter="url(#card-shadow)">
+    <rect x="-26" y="-26" width="52" height="52" rx="14" fill="#1f1e09" stroke="#f7df1e" stroke-width="1.5"/>
+    <rect x="-17" y="-17" width="34" height="34" rx="4" fill="#f7df1e"/>
+    <text x="6" y="11" font-size="19" font-family="'Segoe UI', 'Arial', sans-serif" font-weight="900" fill="#000000" text-anchor="end">JS</text>
+  </g>
+
+  <!-- Python Badge (Mid-Left Lower) -->
+  <g transform="translate(140, 580)" filter="url(#card-shadow)">
+    <rect x="-26" y="-26" width="52" height="52" rx="14" fill="#0b1726" stroke="#3776ab" stroke-width="1.5"/>
+    <!-- Python Snake Glyphs -->
+    <path d="M -2,-13 C -8,-13 -12,-9 -12,-4 L -12,0 L -4,0 L -4,2 L -12,2 C -15,2 -17,5 -17,9 C -17,13 -14,16 -10,16 L -7,16 L -7,13 C -7,10 -4,8 0,8 L 4,8 L 4,5 L -2,5 C -6,5 -7,3 -7,0 C -7,-3 -5,-4 -2,-4 L 6,-4 C 9,-4 11,-6 11,-9 C 11,-12 9,-13 6,-13 Z" fill="#3776ab"/>
+    <circle cx="-5" cy="-8" r="1.5" fill="#ffffff"/>
+    <path d="M 2,13 C 8,13 12,9 12,4 L 12,0 L 4,0 L 4,-2 L 12,-2 C 15,-2 17,-5 17,-9 C 17,-13 14,-16 10,-16 L 7,-16 L 7,-13 C 7,-10 4,-8 0,-8 L -4,-8 L -4,-5 L 2,-5 C 6,-5 7,-3 7,0 C 7,3 5,4 2,4 L -6,4 C -9,4 -11,6 -11,9 C -11,12 -9,13 -6,13 Z" fill="#ffd43b"/>
+    <circle cx="5" cy="8" r="1.5" fill="#111111"/>
+  </g>
+
+  <!-- HTML5 Badge (Lower Left) -->
+  <g transform="translate(60, 800)" filter="url(#card-shadow)">
+    <rect x="-24" y="-24" width="48" height="48" rx="12" fill="#201109" stroke="#e34f26" stroke-width="1.5"/>
+    <path d="M -11,-12 L 11,-12 L 9,10 L 0,13 L -9,10 Z" fill="#e34f26"/>
+    <path d="M 0,-10 L 8,-10 L 6.5,8 L 0,10.5 Z" fill="#f06529"/>
+    <path d="M -6,-7 L 6,-7 L 5.5,-3 L -5.5,-3 L -5,2 L 4,2 L 3.5,6 L 0,7 L -3.5,6 L -3.7,4 L -5.7,4 L -5.2,8 L 0,9.5 L 5.2,8 L 6,-1 L -5,-1 Z" fill="#ffffff" font-size="8"/>
+  </g>
+
+  <!-- CSS3 Badge (Lower Right) -->
+  <g transform="translate(1020, 800)" filter="url(#card-shadow)">
+    <rect x="-24" y="-24" width="48" height="48" rx="12" fill="#091826" stroke="#1572b6" stroke-width="1.5"/>
+    <path d="M -11,-12 L 11,-12 L 9,10 L 0,13 L -9,10 Z" fill="#1572b6"/>
+    <path d="M 0,-10 L 8,-10 L 6.5,8 L 0,10.5 Z" fill="#33a9dc"/>
+    <path d="M -6,-7 L 6,-7 L 5.5,-3 L -5.5,-3 L -5,2 L 4,2 L 3.5,6 L 0,7 L -3.5,6 L -3.7,4 L -5.7,4 L -5.2,8 L 0,9.5 L 5.2,8 L 6,-1 L -5,-1 Z" fill="#ffffff"/>
+  </g>
+
+  <!-- Git Badge (Mid-Right Lower) -->
+  <g transform="translate(940, 580)" filter="url(#card-shadow)">
+    <rect x="-26" y="-26" width="52" height="52" rx="14" fill="#24110b" stroke="#f05032" stroke-width="1.5"/>
+    <g transform="rotate(45) scale(0.85)">
+      <rect x="-14" y="-14" width="28" height="28" rx="4" fill="#f05032"/>
+      <circle cx="-5" cy="0" r="3.2" fill="#ffffff"/>
+      <circle cx="5" cy="-5" r="3.2" fill="#ffffff"/>
+      <circle cx="5" cy="5" r="3.2" fill="#ffffff"/>
+      <line x1="-5" y1="0" x2="5" y2="5" stroke="#ffffff" stroke-width="2.5"/>
+      <line x1="5" y1="-5" x2="5" y2="5" stroke="#ffffff" stroke-width="2.5"/>
+    </g>
+  </g>
+
+  <!-- 7. THE CENTERPIECE: THE GLOWING CODE DIYA (Oil Lamp) -->
+  <!-- Ambient Radiance Behind Flame & Diya -->
+  <ellipse cx="540" cy="580" rx="260" ry="240" fill="url(#flameGlow)" filter="url(#intense-glow)"/>
+  <ellipse cx="540" cy="550" rx="140" ry="160" fill="url(#diyaLightGlow)" filter="url(#intense-glow)"/>
+
+  <!-- Living Flame -->
+  <g transform="translate(540, 480)" filter="url(#intense-glow)">
+    <!-- Flame Outer Corona -->
+    <path d="M 0,-140 C 35,-95 65,-45 50,15 C 38,55 0,65 0,65 C 0,65 -38,55 -50,15 C -65,-45 -35,-95 0,-140 Z" fill="url(#outerFlame)" opacity="0.9"/>
+    <!-- Flame Inner Core -->
+    <path d="M 0,-115 C 22,-80 40,-40 30,10 C 22,40 0,48 0,48 C 0,48 -22,40 -30,10 C -40,-40 -22,-80 0,-115 Z" fill="url(#innerFlame)"/>
+    <!-- White-Hot Filament Center -->
+    <ellipse cx="0" cy="5" rx="10" ry="25" fill="#ffffff" opacity="0.95"/>
+    <!-- Blue Combustion Base -->
+    <ellipse cx="0" cy="45" rx="16" ry="9" fill="#00e5ff" opacity="0.85"/>
+  </g>
+
+  <!-- Diya Wick -->
+  <path d="M 540,545 Q 540,515 541,505" stroke="#2a1409" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="541" cy="505" r="3" fill="#ffdd44" filter="url(#neon-rim)"/>
+
+  <!-- The Code Diya Clay Body (Constructed Entirely from Glowing Code Lines) -->
+  <g transform="translate(540, 680)">
+    <!-- Base Shading Shell -->
+    <path d="M -230,-60 Q 0,165 230,-60 Q 180,-90 0,-90 Q -180,-90 -230,-60 Z" fill="url(#diyaBowlGrad)" stroke="url(#diyaRimGlow)" stroke-width="3" filter="url(#card-shadow)"/>
+
+    <!-- Inner Oil Reservoir Surface (Glowing Molten Gold Oil) -->
+    <ellipse cx="0" cy="-65" rx="200" ry="28" fill="#5c2006" stroke="#ffaa00" stroke-width="2"/>
+    <ellipse cx="0" cy="-65" rx="170" ry="20" fill="#a8430a" opacity="0.85"/>
+    <ellipse cx="0" cy="-65" rx="120" ry="12" fill="#ffd700" opacity="0.55" filter="url(#glow-gold)"/>
+
+    <!-- Illuminated Lines of Code Sculpting the Diya Rim & Hull -->
+    <!-- Top Rim Code -->
+    <g font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" text-anchor="middle">
+      <!-- Rim Arc Text -->
+      <text x="0" y="-62" fill="#fff5cc" filter="url(#neon-rim)">
+        &lt;diya class="radiant" fuel="devotion" light="infinite" /&gt;
+      </text>
+
+      <!-- Bowl Hull Glowing Code Lines (Arranged in curved harmony) -->
+      <text x="0" y="-30" fill="#ffd700">
+        <tspan fill="#66d9ef">const</tspan> <tspan fill="#a6e22e">prosperity</tspan> = <tspan fill="#ae81ff">Infinity</tspan>; <tspan fill="#66d9ef">const</tspan> <tspan fill="#a6e22e">bugs</tspan> = <tspan fill="#f92672">null</tspan>;
+      </text>
+      <text x="0" y="-8" fill="#4facfe">
+        <tspan fill="#f92672">while</tspan> (<tspan fill="#ffffff">darkness</tspan>) { <tspan fill="#ffcf40">illuminate</tspan>(); <tspan fill="#a6e22e">spreadJoy</tspan>(); }
+      </text>
+      <text x="0" y="14" fill="#a6e22e">
+        <tspan fill="#66d9ef">import</tspan> { <tspan fill="#ffd700">Peace</tspan>, <tspan fill="#ffd700">Health</tspan>, <tspan fill="#ffd700">Wealth</tspan> } <tspan fill="#66d9ef">from</tspan> <tspan fill="#e6db74">'diwali'</tspan>;
+      </text>
+      <text x="0" y="36" font-size="11" fill="#fd971f">
+        <tspan fill="#f92672">&lt;div</tspan> <tspan fill="#a6e22e">style</tspan>=<tspan fill="#e6db74">"box-shadow: 0 0 100px #gold;"</tspan><tspan fill="#f92672">&gt;</tspan>✨<tspan fill="#f92672">&lt;/div&gt;</tspan>
+      </text>
+      <text x="0" y="58" font-size="10.5" fill="#f8f8f2">
+        <tspan fill="#66d9ef">return</tspan> <tspan fill="#ff66cc">new</tspan> <tspan fill="#ffd700">Blessings</tspan>({ <tspan fill="#4facfe">peace</tspan>: <tspan fill="#ae81ff">true</tspan>, <tspan fill="#4facfe">bugsFixed</tspan>: <tspan fill="#ae81ff">true</tspan> });
+      </text>
+      <text x="0" y="78" font-size="10" fill="#6c809a">
+        &lt;!-- Code the Light, Debug the Darkness --&gt;
+      </text>
+    </g>
+
+    <!-- Diya Pedestal Base -->
+    <ellipse cx="0" cy="98" rx="80" ry="14" fill="#421403" stroke="#ffaa00" stroke-width="2"/>
+    <ellipse cx="0" cy="98" rx="60" ry="8" fill="#7a2b06" stroke="#ffd700" stroke-width="1.5"/>
+  </g>
+
+  <!-- 8. MAIN TYPOGRAPHY & BRANDING (Upper Section) -->
+  <!-- Top Terminal Badge -->
+  <g transform="translate(540, 85)" text-anchor="middle">
+    <rect x="-140" y="-18" width="280" height="34" rx="17" fill="#131c2e" stroke="#ffaa00" stroke-width="1.2" stroke-opacity="0.8"/>
+    <circle cx="-115" cy="-1" r="4.5" fill="#00ff88" filter="url(#neon-rim)"/>
+    <text x="5" y="4" font-size="12" font-weight="700" fill="#ffd700" letter-spacing="2.5" font-family="'JetBrains Mono', monospace">
+      // FESTIVAL OF LIGHTS 2026
+    </text>
+  </g>
+
+  <!-- MAIN TITLE: HAPPY DIWALI 🪔 -->
+  <g transform="translate(540, 168)" text-anchor="middle">
+    <!-- Outer Glow Shadow -->
+    <text x="0" y="0" font-size="76" font-weight="900" fill="#ff7700" opacity="0.6" filter="url(#intense-glow)" letter-spacing="6" font-family="'Segoe UI', 'Montserrat', -apple-system, sans-serif">
+      HAPPY DIWALI 🪔
+    </text>
+    <!-- Crisp Gold Gradient Foreground -->
+    <text x="0" y="0" font-size="76" font-weight="900" fill="url(#goldText)" filter="url(#neon-rim)" letter-spacing="6" font-family="'Segoe UI', 'Montserrat', -apple-system, sans-serif">
+      HAPPY DIWALI 🪔
+    </text>
+  </g>
+
+  <!-- TAGLINE: Code the Light, Debug the Darkness! -->
+  <g transform="translate(540, 222)" text-anchor="middle">
+    <!-- Background Pill -->
+    <rect x="-270" y="-18" width="540" height="38" rx="19" fill="#0b101d" stroke="url(#cyanNeon)" stroke-width="1.5" stroke-opacity="0.7"/>
+    <text x="0" y="6" font-size="18.5" font-weight="700" fill="#ffffff" letter-spacing="1.5" font-family="'JetBrains Mono', monospace">
+      <tspan fill="#00f2fe">&lt;</tspan>Code the Light<tspan fill="#ffaa00">, </tspan>Debug the Darkness!<tspan fill="#00f2fe"> /&gt;</tspan>
+    </text>
+  </g>
+
+  <!-- 9. FOOTER STATUS BAR (Developer IDE Theme) -->
+  <g transform="translate(0, 1040)">
+    <rect width="1080" height="40" fill="#090d16" stroke="#1f2c42" stroke-width="1"/>
+    
+    <!-- Left Git Branch & Envs -->
+    <g transform="translate(30, 25)" font-family="'JetBrains Mono', monospace" font-size="12" fill="#8ba2c4">
+      <!-- Git Branch Icon -->
+      <path d="M 0,-8 L 0,0 M 0,0 L 8,4" stroke="#4facfe" stroke-width="2" fill="none"/>
+      <circle cx="0" cy="-8" r="2.5" fill="#4facfe"/>
+      <circle cx="8" cy="4" r="2.5" fill="#4facfe"/>
+      <text x="18" y="0"><tspan fill="#4facfe">main</tspan> | UTF-8 | JavaScript / React / Python</text>
+    </g>
+
+    <!-- Center Status Indicator -->
+    <g transform="translate(540, 25)" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12">
+      <circle cx="-135" cy="-4" r="4" fill="#00ff88" filter="url(#neon-rim)"/>
+      <text x="0" y="0" fill="#ffd700">⚡ 0 Errors | 0 Warnings | 100% Illumination</text>
+    </g>
+
+    <!-- Right Copyright / Festival Tag -->
+    <g transform="translate(1050, 25)" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="12" fill="#8ba2c4">
+      <text x="0" y="0"><tspan fill="#ff9900">🪔 Shubh Deepavali</tspan></text>
+    </g>
+  </g>
+
+</svg>
+

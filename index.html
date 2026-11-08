@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAPPY DIWALI | Ultra-Luxury & Cinematic Developer Poster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="luxury-theme">
+  <!-- Luxury Header Bar -->
+  <header class="app-header">
+    <div class="logo-area">
+      <span class="gold-crest">🪔</span>
+      <span class="brand-text">DIWALI <span class="highlight">LUXURY</span></span>
+      <span class="badge luxury-badge">Apple-Style Minimalist Edition</span>
+    </div>
+    <div class="header-actions">
+      <button id="soundToggleBtn" class="pill-btn sound-btn" title="Toggle Golden Temple Chimes">
+        <span class="btn-icon">✨</span> <span class="sound-text">Chimes: ON</span>
+      </button>
+      <button id="fullscreenBtn" class="pill-btn" title="View Fullscreen Cinema Mode">
+        <span class="btn-icon">⛶</span> Fullscreen
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Studio Layout -->
+  <main class="studio-container">
+    <!-- Left Workspace: Interactive 1:1 Poster Viewport -->
+    <section class="poster-viewport">
+      <div class="poster-frame" id="posterFrame">
+        
+        <!-- Mode 1: Cinema Masterpiece Render (Flagship) -->
+        <div class="poster-layer active" id="cinemaArtLayer">
+          <img src="diwali_luxury_master_render.png" alt="Cinema Masterpiece Developer Diwali Poster" class="master-img" id="cinemaPosterImg">
+          <div class="ambient-spotlight" id="mouseSpotlight"></div>
+        </div>
+
+        <!-- Mode 2: Ultra-Luxury Noir Render -->
+        <div class="poster-layer" id="luxuryArtLayer">
+          <img src="diwali_luxury_poster.png" alt="Ultra Luxury Cinematic Developer Diwali Poster" class="master-img" id="luxuryPosterImg">
+          <div class="ambient-spotlight"></div>
+        </div>
+
+        <!-- Mode 3: 3D Cyber Edition Render -->
+        <div class="poster-layer" id="cyberArtLayer">
+          <img src="diwali_coder_poster.png" alt="3D Cyber Developer Diwali Poster" class="master-img" id="cyberPosterImg">
+        </div>
+
+        <!-- Mode 4: Pure Code Vector SVG -->
+        <div class="poster-layer" id="vectorArtLayer">
+          <object data="luxury_poster.svg" type="image/svg+xml" class="vector-obj" id="svgPosterObj"></object>
+        </div>
+
+        <!-- Dynamic Overlay Particle & Firework Canvas -->
+        <canvas id="fireworkCanvas" class="firework-canvas"></canvas>
+
+        <!-- Dynamic Customizer Watermark / Personalized Signature -->
+        <div class="custom-greeting-overlay" id="customGreetingOverlay">
+          <div class="author-badge luxury-author-badge" id="displayAuthorBadge">
+            <span class="dot"></span>
+            <span id="displayAuthorText">Made with ❤️ &amp; Code</span>
+          </div>
+        </div>
+
+        <!-- Click Hint -->
+        <div class="click-hint" id="clickHint">
+          <span>✨ Click anywhere to ignite luxury golden fireworks</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Workspace: Customizer & Luxury Controls -->
+    <aside class="control-panel">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div>
+            <h3>👑 Luxury Poster Studio</h3>
+            <p class="panel-sub">Cinematic 3D • 4K Quality • 1:1 Instagram Post</p>
+          </div>
+          <span class="tag gold-tag">ULTRA-PREMIUM</span>
+        </div>
+
+        <!-- View Mode Switcher -->
+        <div class="control-group">
+          <label class="control-label">Aesthetic Edition</label>
+          <div class="mode-switch-grid four-col">
+            <button class="mode-btn active" id="btnModeCinema" data-mode="cinema">
+              <span class="mode-icon">👑</span>
+              <span class="mode-title">Masterpiece</span>
+              <span class="mode-desc">24K Gold &amp; Marble</span>
+            </button>
+            <button class="mode-btn" id="btnModeLuxury" data-mode="luxury">
+              <span class="mode-icon">✨</span>
+              <span class="mode-title">Luxury Noir</span>
+              <span class="mode-desc">Gold Diya &amp; Bokeh</span>
+            </button>
+            <button class="mode-btn" id="btnModeCyber" data-mode="cyber">
+              <span class="mode-icon">🔮</span>
+              <span class="mode-title">3D Cyber</span>
+              <span class="mode-desc">Neon Volumetric</span>
+            </button>
+            <button class="mode-btn" id="btnModeVector" data-mode="vector">
+              <span class="mode-icon">&lt;/&gt;</span>
+              <span class="mode-title">Vector SVG</span>
+              <span class="mode-desc">Scalable 4K</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Programmer Message Display -->
+        <div class="control-group quote-group">
+          <label class="control-label">Special Programmer Blessing</label>
+          <div class="quote-box">
+            <p class="quote-text">“May your life compile successfully and your happiness never encounter errors!”</p>
+            <div class="quote-tagline">Code the Light. Debug the Darkness.</div>
+          </div>
+        </div>
+
+        <!-- Code Snippets Highlights -->
+        <div class="control-group">
+          <label class="control-label">Integrated Code Snippets</label>
+          <div class="code-chips-grid">
+            <div class="code-chip"><code>console.log("Happy Diwali");</code></div>
+            <div class="code-chip"><code>function spreadHappiness() {}</code></div>
+            <div class="code-chip"><code>&lt;Diwali celebration={true} /&gt;</code></div>
+            <div class="code-chip"><code>while(true) { spreadJoy(); }</code></div>
+          </div>
+        </div>
+
+        <!-- Custom Greeting & Personalization -->
+        <div class="control-group">
+          <label for="inputAuthor" class="control-label">Personalize Signature (Optional)</label>
+          <div class="input-wrapper">
+            <span class="input-prefix">Signature:</span>
+            <input type="text" id="inputAuthor" value="Made with ❤️ &amp; Code" placeholder="e.g. Made with ❤️ & Code by Alex">
+          </div>
+        </div>
+
+        <!-- Interactive FX Toggles -->
+        <div class="control-group">
+          <label class="control-label">Cinematic Effects</label>
+          <div class="toggles-grid">
+            <label class="toggle-pill">
+              <input type="checkbox" id="chkAutoFireworks" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-label">Gold Fireworks</span>
+            </label>
+            <label class="toggle-pill">
+              <input type="checkbox" id="chkSparkles" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-label">24K Embers</span>
+            </label>
+            <label class="toggle-pill">
+              <input type="checkbox" id="chkSound" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-label">Golden Chimes</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Action / Download Buttons -->
+        <div class="control-group download-section">
+          <button id="downloadHdBtn" class="download-action-btn luxury-gold-btn">
+            <span class="icon">📥</span>
+            <div class="btn-text-col">
+              <strong>Download Ultra-Luxury Poster (1080×1080 PNG)</strong>
+              <small>Photorealistic 3D • Ready for Instagram &amp; LinkedIn</small>
+            </div>
+          </button>
+
+          <div class="secondary-btn-row">
+            <button id="downloadSvgBtn" class="download-action-btn secondary">
+              <span class="icon">📐</span>
+              <span>Download Vector SVG</span>
+            </button>
+            <button id="launchFireworkBtn" class="download-action-btn secondary">
+              <span class="icon">🎆</span>
+              <span>Ignite Fireworks</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tech Stack Badges Showcase -->
+        <div class="tech-stack-row">
+          <div class="stack-chip"><span class="chip-color js"></span>JavaScript</div>
+          <div class="stack-chip"><span class="chip-color react"></span>React</div>
+          <div class="stack-chip"><span class="chip-color py"></span>Python</div>
+          <div class="stack-chip"><span class="chip-color html"></span>HTML5</div>
+          <div class="stack-chip"><span class="chip-color css"></span>CSS3</div>
+        </div>
+
+      </div>
+    </aside>
+  </main>
+
+  <!-- Offscreen High-Res Canvas for Instant PNG Generation -->
+  <canvas id="exportCanvas" width="1080" height="1080" style="display:none;"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
