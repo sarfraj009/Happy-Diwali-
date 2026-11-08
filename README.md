@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 👑 Ultra-Luxury & Cinematic Happy Diwali Poster Suite
 
 > **"Code the Light. Debug the Darkness."**  
@@ -65,3 +66,6 @@ Open **[`index.html`](file:///c:/Users/pc/Desktop/Diwali/index.html)** in any mo
 ---
 
 *Wishing you a happy, joyous, bug-free, and prosperous Diwali! 🪔✨*
+=======
+# Happy-Diwali-
+>>>>>>> df5a389a73f443c58cf44bc6d205be2750bb0793
